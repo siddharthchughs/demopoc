@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.FirstFragment">
+
+    <TextView
+        android:id="@+id/tv_MovieTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:textSize="20sp"
+        android:paddingTop="@dimen/topPadding"
+        android:paddingBottom="@dimen/topPadding"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintBottom_toTopOf="@id/movieList"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieList"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb_loadingList"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        style="@style/Widget.AppCompat.ProgressBar"
+        app:layout_constraintTop_toTopOf="@id/movieList"
+        app:layout_constraintBottom_toBottomOf="@id/movieList"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        />
+    <TextView
+        android:id="@+id/tv_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_outerscope"
+        android:text="@string/purchase_movie"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movieList"
+        app:layout_constraintVertical_bias="0.279" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="topPadding">8dp</dimen>
+    <dimen name="bottomPadding">8dp</dimen>
+</resources>
